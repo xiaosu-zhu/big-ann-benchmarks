@@ -6,18 +6,7 @@
 
 The only prerequisite is Python (tested with 3.6) and Docker. Works with newer versions of Python as well but probably requires an updated `requirements.txt` on the host. (Suggestion: copy `requirements.txt` to `requirements${PYTHON_VERSION}.txt` and remove all fixed versions. `requirements.txt` has to be kept for the docker containers.)
 
-1. Clone the repo.
-2. Run `pip install -r requirements.txt` (Use `requirements_py38.txt` if you have Python 3.8.)
-3. Install docker by following instructions [here](https://docs.docker.com/engine/install/ubuntu/).
-You might also want to follow the post-install steps for running docker in non-root user mode.
-3. Run `python install.py` to build all the libraries inside Docker containers.
-
-## Storing Data
-
-The framework assumes that all data is stored in `data/`.
-Please use a symlink if your datasets and indices are supposed to be stored somewhere else.
-The location of the linked folder matters a great deal for SSD-based search performance in T2. 
-A local SSD such as the one found on Azure Ls-series VMs is better than remote disks, even premium ones.
+ure Ls-series VMs is better than remote disks, even premium ones.
 See [T1/T2](t1_t2/README.md) for more details.
 
 ## Data sets
